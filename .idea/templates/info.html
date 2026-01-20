@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Info</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- per gestire le grandezze-->
 
 </head>
@@ -10,50 +12,59 @@
 
 
 
-    <div class="grid-container">
 
-        <div class="w1" >
-            <button class="testbtn1">
-                <img src="pic_trulli.jpg" alt="Trulli" width="50" height="30">
+<div class="grid-container">
+
+    <div class="w1">
+        <form action="{{ url_for('home') }}" method="get">
+            <button type="submit" class="testbtn1">
+                <!-- <img src="{{ url_for('static', filename='icone/home.png') }}"
+                      alt="Home" width="50" height="30">-->
                 <br>Home
-
             </button>
+        </form>
+    </div>
 
-        </div>
 
-        <div class="w2" >
-            <button class="testbtn1">
-                <img src="pic_trulli.jpg" alt="Trulli" width="50" height="30">
+    <div class="w2" >
+        <form action="{{ url_for('prenotazioni') }}" method="get">
+            <button type="submit" class="testbtn1">
+                <img src="\icone\prenotazioni.png" alt="Prenotazioni" width="50" height="30">
                 <br>Prenotazioni
 
             </button>
-        </div>
+        </form>
+    </div>
 
-        <div class="w3" >
-            <button class="testbtn1">
-                <img src="pic_trulli.jpg" alt="Trulli" width="50" height="30">
-                <br>Spazio
+    <div class="w3" >
+        <button class="testbtn1">
 
-            </button>
-        </div>
+            <br>Spazio
 
-        <div class="w4" >
-            <button class="testbtn1">
-                <img src="pic_trulli.jpg" alt="Trulli" width="50" height="30">
+        </button>
+    </div>
+
+    <div class="w4" >
+        <form action="{{ url_for('servizi') }}" method="get">
+            <button type="submit" class="testbtn1">
+                <img src="\icone\servizi.png" alt="Servizi" width="50" height="30">
                 <br>Servizi
 
             </button>
-        </div>
+        </form>
+    </div>
 
-        <div class="w5" >
-            <button class="testbtn1">
-                <img src="pic_trulli.jpg" alt="Trulli" width="50" height="30">
+    <div class="w5" >
+        <form action="{{ url_for('info') }}" method="get">
+            <button type="submit" class="testbtn1">
+                <img src="\icone\info.png" alt="Info" width="50" height="30">
                 <br>Info
 
             </button>
-        </div>
-
+        </form>
     </div>
+
+</div>
 
 <!-- SALVATORE + -->
 <!-- <div class="glass-effect glass-card-large">
