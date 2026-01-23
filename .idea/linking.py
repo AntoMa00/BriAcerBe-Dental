@@ -37,9 +37,11 @@ def appuntamento():
 @app.route("/dentist")
 def dentist():
     return render_template("dentist.html")
+
 @app.route("/surgeon")
 def surgeon():
     return render_template("surgeon.html")
+
 @app.route("/hygienist")
 def hygienist():
     return render_template("hygienist.html")
