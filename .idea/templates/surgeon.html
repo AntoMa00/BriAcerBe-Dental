@@ -5,9 +5,11 @@
     <title>Chirurgo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='piece.css') }}">
 </head>
+
 <body>
+
 <form action="{{ url_for('pippo') }}" method="post">
-    <button type="sumbit" name="chir_uno" class="dashboard">
+    <button type="submit" name="servizio" value="estrazione" class="dashboard">
         <div class="piece-all">
             <img
                     src="{{ url_for('static', filename='icone/chirurgo.png') }}"
@@ -23,11 +25,60 @@
 
             <div>
                 <span class="piece-time">
-                    30min.
+                    30 min.
                 </span>
             </div>
         </div>
     </button>
 </form>
+
+<form action="{{ url_for('pippo') }}" method="post">
+    <button type="submit" name="servizio" value="servizio2" class="dashboard">
+        <div class="piece-all">
+            <img
+                    src="{{ url_for('static', filename='icone/chirurgo.png') }}"
+                    alt="Estr"
+                    class="piece-image"
+            >
+
+            <div class="piece-info">
+                <span class="piece-title">
+                    Servizio 2
+                </span>
+            </div>
+
+            <div>
+                <span class="piece-time">
+                    Tempo 2
+                </span>
+            </div>
+        </div>
+    </button>
+</form>
+
+<form action="{{ url_for('pippo') }}" method="post">
+    <button type="submit" name="servizio" value="servizio3" class="dashboard">
+        <div class="piece-all">
+            <img
+                    src="{{ url_for('static', filename='icone/chirurgo.png') }}"
+                    alt="Estr"
+                    class="piece-image"
+            >
+
+            <div class="piece-info">
+                <span class="piece-title">
+                    Servizio 3
+                </span>
+            </div>
+
+            <div>
+                <span class="piece-time">
+                    Tempo 3
+                </span>
+            </div>
+        </div>
+    </button>
+</form>
+
 </body>
 </html>

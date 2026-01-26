@@ -3,8 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Igienista</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='piece.css') }}">
 </head>
 <body>
+<form action="{{ url_for('pippo') }}" method="post">
+    <button type="sumbit" name="igienista_uno" class="dashboard">
+        <div class="piece-all">
+            <img
+                    src="{{ url_for('static', filename='icone/igienista.png') }}"
+                    alt="Estr"
+                    class="piece-image"
+            >
+
+            <div class="piece-info">
+                <span class="piece-title">
+                    Pulizia dei denti
+                </span>
+            </div>
+
+            <div>
+                <span class="piece-time">
+                    15min.
+                </span>
+            </div>
+        </div>
+    </button>
+</form>
+<form action="{{ url_for('pippo') }}" method="post">
+    <button type="sumbit" name="igienista_uno" class="dashboard">
+        <div class="piece-all">
+            <img
+                    src="{{ url_for('static', filename='icone/igienista.png') }}"
+                    alt="Estr"
+                    class="piece-image"
+            >
+
+            <div class="piece-info">
+                <span class="piece-title">
+                    servizio2
+                </span>
+            </div>
+
+            <div>
+                <span class="piece-time">
+                    tempo2
+                </span>
+            </div>
+        </div>
+    </button>
+</form>
+<form action="{{ url_for('pippo') }}" method="post">
+    <button type="sumbit" name="igienista_uno" class="dashboard">
+        <div class="piece-all">
+            <img
+                    src="{{ url_for('static', filename='icone/igienista.png') }}"
+                    alt="Estr"
+                    class="piece-image"
+            >
+
+            <div class="piece-info">
+                <span class="piece-title">
+                   servizio 3
+                </span>
+            </div>
+
+            <div>
+                <span class="piece-time">
+                    tempo3
+                </span>
+            </div>
+        </div>
+    </button>
+</form>
 
 </body>
 </html>
