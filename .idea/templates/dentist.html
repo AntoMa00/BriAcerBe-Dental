@@ -3,76 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Dentista</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='piece.css') }}">
-
 </head>
-<body>
+
+<body class="dentista">
+
 <form action="{{ url_for('pippo') }}" method="post">
-    <button type="sumbit" name="igienista_uno" class="dashboard">
+    <button type="submit" name="servizio" value="otturazione" class="dashboard">
         <div class="piece-all">
-            <img
-                    src="{{ url_for('static', filename='icone/igienista.png') }}"
-                    alt="Estr"
-                    class="piece-image"
-            >
+            <img src="{{ url_for('static', filename='icone/dentista.png') }}"
+                 alt="Dentista" class="piece-image">
 
             <div class="piece-info">
-                <span class="piece-title">
-                    Impianto
-                </span>
+                <span class="piece-title">Otturazione</span>
             </div>
 
-            <div>
-                <span class="piece-time">
-                    15min.
-                </span>
-            </div>
-        </div>
-    </button>
-</form><form action="{{ url_for('pippo') }}" method="post">
-    <button type="sumbit" name="igienista_uno" class="dashboard">
-        <div class="piece-all">
-            <img
-                    src="{{ url_for('static', filename='icone/igienista.png') }}"
-                    alt="Estr"
-                    class="piece-image"
-            >
-
-            <div class="piece-info">
-                <span class="piece-title">
-                    servizio2
-                </span>
-            </div>
-
-            <div>
-                <span class="piece-time">
-                    tempo2
-                </span>
-            </div>
-        </div>
-    </button>
-</form><form action="{{ url_for('pippo') }}" method="post">
-    <button type="sumbit" name="igienista_uno" class="dashboard">
-        <div class="piece-all">
-            <img
-                    src="{{ url_for('static', filename='icone/igienista.png') }}"
-                    alt="Estr"
-                    class="piece-image"
-            >
-
-            <div class="piece-info">
-                <span class="piece-title">
-                    servizio3
-                </span>
-            </div>
-
-            <div>
-                <span class="piece-time">
-                    tempo3
-                </span>
-            </div>
+            <span class="piece-time">30 min</span>
         </div>
     </button>
 </form>
+
+<form action="{{ url_for('pippo') }}" method="post">
+    <button type="submit" name="servizio" value="impianto" class="dashboard">
+        <div class="piece-all">
+            <img src="{{ url_for('static', filename='icone/dentista.png') }}"
+                 alt="Dentista" class="piece-image">
+
+            <div class="piece-info">
+                <span class="piece-title">Impianto</span>
+            </div>
+
+            <span class="piece-time">45 min</span>
+        </div>
+    </button>
+</form>
+
+<form action="{{ url_for('pippo') }}" method="post">
+    <button type="submit" name="servizio" value="controllo" class="dashboard">
+        <div class="piece-all">
+            <img src="{{ url_for('static', filename='icone/dentista.png') }}"
+                 alt="Dentista" class="piece-image">
+
+            <div class="piece-info">
+                <span class="piece-title">Controllo</span>
+            </div>
+
+            <span class="piece-time">20 min</span>
+        </div>
+    </button>
+</form>
+
 </body>
 </html>

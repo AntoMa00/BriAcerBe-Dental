@@ -1,19 +1,120 @@
-.prenotabtn {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 900px;
-    width: 300px;
-    height: 70px;
+/*.prenotabtn {*/
+/*    position: fixed;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    border-radius: 900px;*/
+/*    width: 300px;*/
+/*    height: 70px;*/
+/*}*/
+
+/*.prenota{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.prenotabtn:hover{*/
+/*    background-color:lightseagreen;*/
+/*}*/
+
+/*html, body {*/
+/*    height: 100%;*/
+/*    margin: 0;*/
+
+/*}*/
+
+/*body {*/
+/*    background-color: white;*/
+
+/*    background-image: url("/static/icone/logo.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*    background-size: contain;*/
+/*}*/
+
+/*body::before {*/
+/*    content: "";*/
+/*    position: fixed;*/
+/*    inset: 0;*/
+/*    background-color: rgba(255, 255, 255, 0.85);*/
+/*    z-index: -1;*/
+/*}*/
+
+/* =========================
+   RESET BASE
+========================= */
+
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-.prenota{
+/* =========================
+   BACKGROUND FULLSCREEN
+========================= */
+
+body {
+    min-height: 100vh;
+
+    /* sfondo che riempie tutto */
+    background-image: url("/static/icone/sfondo-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   /* 👈 RIEMPIE TUTTO */
+
+    /* fallback colore */
+    background-color: #ffffff;
+}
+
+/* =========================
+   CONTENITORE CENTRALE
+========================= */
+
+.prenota {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.prenotabtn:hover{
-    background-color:red;
+/* =========================
+   BOTTONE PRENOTA
+========================= */
+
+.prenotabtn {
+    border: none;
+    border-radius: 999px;
+
+    width: clamp(240px, 70vw, 320px);
+    height: 68px;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #222;
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+            background-color 0.25s ease,
+            color 0.25s ease,
+            transform 0.15s ease,
+            box-shadow 0.15s ease;
+}
+
+/* hover */
+.prenotabtn:hover {
+    background-color: lightseagreen;
+    color: white;
+}
+
+/* tap */
+.prenotabtn:active {
+    transform: scale(0.97);
+    box-shadow:
+            0 6px 15px rgba(0, 0, 0, 0.35);
 }

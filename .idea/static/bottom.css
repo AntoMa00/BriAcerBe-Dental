@@ -1,53 +1,179 @@
 
+/*fatto con michele precedentemente*/
+/*.glass-effect {*/
+/*    background: rgba(255, 125, 158, 0.1);      !* Trasparenza bianca *!*/
+/*    backdrop-filter: blur(70px);               !* Sfocatura dietro *!*/
+/*    -webkit-backdrop-filter: blur(50px);       !* Safari *!*/
+/*    border: 1px solid rgba(255, 255, 255, 0.2); !* Bordo luminoso *!*/
+/*    border-radius: 16px;                       !* Angoli arrotondati *!*/
+/*    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); !* Ombra profonda *!*/
+/*}*/
 
-.glass-effect {
-    background: rgba(255, 125, 158, 0.1);      /* Trasparenza bianca */
-    backdrop-filter: blur(70px);               /* Sfocatura dietro */
-    -webkit-backdrop-filter: blur(50px);       /* Safari */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordo luminoso */
-    border-radius: 16px;                       /* Angoli arrotondati */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Ombra profonda */
+/*.bottom {*/
+/*    position: fixed;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    background-color: black;*/
+/*    height: 100px;*/
+/*    display: grid;*/
+/*    grid-template-columns: 33.3% 33.3% 33.3% ;*/
+/*}*/
+
+/*body{*/
+/*    background-color:lightslategrey;*/
+/*}*/
+
+/*.home, .prenotazioni, .servizi, .info, .spazio {*/
+/*    background-color: white;*/
+/*    height: 100px;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.home-form, .prenotazioni-form, .servizi-form, .info-form{*/
+/*    height: 100%;*/
+/*}*/
+
+/*.nextbtn {*/
+/*    background-color: lightseagreen;*/
+/*    color: white;*/
+/*    font-size: 15px;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    !* padding: 32px; *!*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.nextbtn:hover {*/
+/*    background-color: lightblue;*/
+/*}*/
+
+
+/* =========================
+   BASE
+========================= */
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
+
+/* =========================
+   BOTTOM BAR CONTAINER
+========================= */
 
 .bottom {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    height: 100px;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 24px);
+    max-width: 900px;
+    height: 80px;
+
     display: grid;
-    grid-template-columns: 33% 33% 33% ;
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: rgb(176, 216, 203);
+    border-radius: 24px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    z-index: 100;
 }
 
-body{
-    background-color:lightslategrey;
+/* =========================
+   SEZIONI INTERNE
+========================= */
+
+.home,
+.prenotazioni,
+.servizi,
+.info,
+.spazio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.home, .prenotazioni, .servizi, .info, .spazio {
-    background-color: orange;
-    height: 100px;
-    color: white;
-    text-align: center;
-}
+/* =========================
+   FORM
+========================= */
 
-.home-form, .prenotazioni-form, .servizi-form, .info-form{
+.home-form,
+.prenotazioni-form,
+.servizi-form,
+.info-form {
+    width: 100%;
     height: 100%;
 }
+
+/* =========================
+   BOTTONI
+========================= */
 
 .nextbtn {
-    background-color: darkred;
-    color: white;
-    font-size: 15px;
+    background: transparent;
+    border: none;
+
     width: 100%;
     height: 100%;
-    /* padding: 32px; */
-    border: none;
-    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
     cursor: pointer;
+
+    border-radius: 18px;
+    transition: background-color 0.2s ease;
 }
 
 .nextbtn:hover {
-    background-color: saddlebrown;
+    background-color: rgba(255, 255, 255, 0.18);
 }
 
+/* =========================
+   ICONE
+========================= */
+
+.bottom img {
+    width: clamp(30px, 8vw, 48px);;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 4px;
+    background: transparent;
+}
+
+/* =========================
+   TESTO SOTTO ICONE
+========================= */
+
+.bottom span {
+    font-size: clamp(13px, 3.5vw, 16px); /* più grande */
+    font-weight: 600;                   /* grassetto */
+    line-height: 1.1;
+
+    margin-top: -2px;                    /* lo avvicina all’icona */
+    display: block;
+    text-align: center;
+}
+
+/* =========================
+   EFFETTO GLASS (OPZIONALE)
+   se vuoi attivarlo, sostituisci
+   background-color della .bottom
+========================= */
+
+/*
+.bottom {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+*/
