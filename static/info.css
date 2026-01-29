@@ -1,0 +1,124 @@
+/* =========================
+   BASE
+========================= */
+
+html, body {
+    margin: 0; /* elimina il margine di default del browser (quello spazio bianco intorno) */
+    padding: 0; /* elimina il padding di default del browser */
+    min-height: 100vh;
+    /* garantisce che la pagina sia ALMENO alta quanto lo schermo:
+       serve per far funzionare bene sfondi full-screen e layout verticali */
+}
+
+body {
+    display: flex;
+    /* usa flexbox per gestire l’allineamento del contenuto */
+
+    justify-content: center;
+    /* centra orizzontalmente il contenuto */
+
+    align-items: flex-start;
+    /* allinea il contenuto in alto (non al centro verticale) */
+
+    padding: 80px 16px 140px;
+    /* 80px sopra  -> spazio di respiro dall’alto
+       16px lati   -> margine sicuro su mobile
+       140px sotto -> spazio per NON finire sotto la bottom bar */
+
+    /* STESSO SFONDO DELLE ALTRE PAGINE */
+    background-image: url("/static/icone/sfondo_appuntamento.png");
+    background-repeat: no-repeat;
+    /* evita che l’immagine si ripeta a mosaico */
+
+    background-position: center;
+    /* centra l’immagine nello schermo */
+
+    background-size: cover;
+    /* fa riempire tutto lo schermo allo sfondo mantenendo le proporzioni */
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    /* usa il font di sistema (stile app native iOS / Android / macOS / Windows) */
+
+    color: #222;
+    /* colore del testo: quasi nero, meno aggressivo del nero puro */
+}
+
+/* =========================
+   CARD INFO
+========================= */
+
+.info-card {
+    width: 100%;
+    /* su mobile occupa tutta la larghezza disponibile */
+
+    max-width: 520px;
+    /* su desktop non diventa troppo larga */
+
+    background: rgba(255, 255, 255, 0.85);
+    /* bianco semi-trasparente per far intravedere lo sfondo */
+
+    border-radius: 24px;
+    /* angoli molto arrotondati (stile moderno/app) */
+
+    padding: 32px 28px;
+    /* spazio interno della card */
+
+    box-shadow:
+            0 10px 30px rgba(0,0,0,0.18),
+                /* ombra principale per dare profondità */
+
+            0 0 0 1px rgba(0,0,0,0.05);
+    /* bordino sottilissimo per definire meglio la card */
+}
+
+/* =========================
+   TESTI
+========================= */
+
+.info-card h1 {
+    margin: 0 0 25px 0;
+    /* elimina margini sopra, lascia spazio sotto */
+
+    font-size: 26px;
+    /* dimensione titolo */
+
+    font-weight: 700;
+    /* grassetto forte per il titolo */
+}
+
+.info-card p {
+    margin: 0;
+    /* elimina il margine di default dei paragrafi */
+
+    font-size: 16px;
+    /* dimensione testo standard */
+
+    line-height: 1.6;
+    /* aumenta la leggibilità (spazio tra le righe) */
+
+    opacity: 0.9;
+    /* rende il testo leggermente più morbido */
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+
+@media (max-width: 480px) {
+    /* regole che valgono SOLO su schermi piccoli */
+
+    body {
+        padding-top: 60px;
+        /* meno spazio sopra su mobile */
+    }
+
+    .info-card {
+        padding: 24px 20px;
+        /* riduce il padding interno su schermi piccoli */
+    }
+
+    .info-card h1 {
+        font-size: 22px;
+        /* titolo leggermente più piccolo su mobile */
+    }
+}
