@@ -4,21 +4,24 @@
     <title>Info</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='bottom.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='info.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- per gestire le grandezze-->
 
 </head>
 <body>
-<h1>BriAcerBe Dental</h1>
-<h2>Via Salvatore Moro,71 Acerra(NA)</h2>
+
+<div class="info-card">
+    <h1>BriAcerBe Dental</h1>
+    <p>
+        Via Salvatore Moro, 71<br>
+        Acerra (NA)
+    </p>
+</div>
+
+</body>
 
 {% include 'components/bottom.html' %}
 
-
-
-
-
-
-
-</body>
 </html>
