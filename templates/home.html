@@ -16,14 +16,14 @@
 Ciao {{ username }}
 
 
-<!--<img src="{{ url_for('static', filename='icone/logo.png') }}" alt="BriAcerBe Dental">-->
-<div class="prenota">
-    <form action="{{ url_for('appuntamento') }}" method="get" class="appuntamento-form">
-        <button class="prenotabtn">
-            Prenota appuntamento
-        </button>
-    </form>
-</div>
+    <!--<img src="{{ url_for('static', filename='icone/logo.png') }}" alt="BriAcerBe Dental">-->
+    <div class="prenota">
+        <form action="{{ url_for('appuntamento') }}" method="get" class="appuntamento-form">
+            <button class="prenotabtn">
+                Prenota appuntamento
+            </button>
+        </form>
+    </div>
 
 {% include 'components/bottom.html' %}
 
