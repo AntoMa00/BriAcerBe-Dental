@@ -16,6 +16,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 15px;
+
 
     padding: 200px 16px 120px;
 

@@ -108,18 +108,51 @@ body {
     font-weight: 600;
 }
 
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
 .delete-btn {
-    background-color: #ff4d4d;
-    border: none;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 8px;
-    cursor: pointer;
+    height: 40px;
+    padding: 0 16px;
+
+    border-radius: 999px;
+    border: 1px solid rgba(220, 53, 69, 0.4);
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+
     font-size: 14px;
-    margin-left: 12px; /* spazio tra value e pulsante */
-    transition: background-color 0.2s;
+    font-weight: 600;
+    color: #b02a37;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 8px 20px rgba(0,0,0,0.18);
+
+    transition:
+            background-color 0.25s ease,
+            color 0.25s ease,
+            transform 0.15s ease,
+            box-shadow 0.15s ease;
 }
 
+/* hover/passo cursore → ROSSO */
 .delete-btn:hover {
-    background-color: #e60000;
+    background-color: #dc3545; /* rosso bootstrap-style */
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+            0 14px 32px rgba(220, 53, 69, 0.45);
+}
+
+/* tap mobile */
+.delete-btn:active {
+    transform: scale(0.96);
+    box-shadow:
+            0 6px 16px rgba(220, 53, 69, 0.5);
 }

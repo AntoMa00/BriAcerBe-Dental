@@ -201,7 +201,7 @@ def conferma():
         db.session.commit()
     except IntegrityError:
         db.session.rollback()
-        return render_template("conferma.html", errore="Occhio! Hai già un appuntamento in questa data a quest'ora.")
+        return render_template("conferma.html", errore="Attenzione! Hai già un appuntamento in questa data a quest'ora.")
 
     return render_template("conferma.html")
 
